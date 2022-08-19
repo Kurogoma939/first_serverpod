@@ -1,3 +1,4 @@
+/// サーバーサイドのコードを呼ぶ
 import 'package:first_serverpod_client/first_serverpod_client.dart';
 import 'package:flutter/material.dart';
 
@@ -49,6 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
   // is successful.
   void _callHello() async {
     try {
+      /// サーバーサイドで実行されるコードを呼ぶ
       final result = await client.example.hello(_textEditingController.text);
       setState(() {
         _resultMessage = result;
